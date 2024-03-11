@@ -11,6 +11,13 @@
   <a href="https://github.com/spencerwooo/onedrive-vercel-index/discussions"><img src="https://img.shields.io/github/discussions/spencerwooo/onedrive-vercel-index?color=CF2B5B&labelColor=black&logo=github" alt="GitHub Discussions" /></a>
 </div>
 
+## Runbooks
+### 404 When Reading the directory
+The fork has been updated with personal creds. Microsoft has a maximum TTL of 2 years for the creds. In case it expired, get a new one. [See this guide](https://ovi.swo.moe/docs/advanced#using-your-own-clientid-and-clientsecret-1). Then update config/api.config.js. Plan to replace to [this fork](https://github.com/iRedScarf/onedrive-index). 
+
+It can also be caused by Redis database. Redis may delete inactive databases if it's not used for 2 weeks for free plans. If it's deleted, log in to Upstash and create and link a new one. See guide on [author wiki](https://ovi.swo.moe/docs/getting-started) and [Upstash](https://upstash.com/docs/redis/howto/vercelintegration). Finally redeploy the app on Vercel, and store the creds to the database again by running the [setup](https://github.com/spencerwooo/onedrive-vercel-index/issues/1049#issuecomment-1604243790). 
+
+
 ## TL;DR
 
 Showcase, share, preview, and download files inside *your* OneDrive with onedrive-vercel-index -
